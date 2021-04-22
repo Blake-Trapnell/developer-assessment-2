@@ -61,7 +61,6 @@ export default {
     margin-bottom: 1rem;
 }
 .event-text {
-text-align: center;
 }
 .chapman-cares--event-description {
     display: flex;
@@ -71,5 +70,16 @@ text-align: center;
 .chapman-cares--event-photo {
     width: 50%;
     margin-right: 15px;
+}
+@media screen and (max-width: 650px) {
+    .chapman-cares--event-photo {
+     margin-right: 0px;
+    }
+    .chapman-cares--event-description {
+        flex-direction: column;
+    }
+    .event-text {
+        text-align: center;
+    }  
 }
 </style>
