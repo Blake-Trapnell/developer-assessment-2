@@ -1,9 +1,9 @@
 <template>
     <header class="weather-banner">
         <span v-if="currentTemp">
-            <strong>{{ currentTemp }}&deg;</strong> Is
+            <strong>{{ currentTemp }}&deg;</strong> Is the
         </span>
-        <span>Current Temperature</span>
+        <span>Current Outside Temperature</span>
     </header>
 </template>
 
@@ -21,7 +21,8 @@ export default {
         this.getTemp();
     },
     methods: {
-        getTemp() {
+            // define function as async to be able to await later in function.
+        async getTemp() {
             // set variables (there are no errors in these strings)
             const url = 'http://api.openweathermap.org/data/2.5/weather';
             const zipCode = '85226';
@@ -30,10 +31,13 @@ export default {
             const endpoint = `${url}?zip=${zipCode}&appid=${apiKey}&units=${units}`;
 
             // make api call
-            const response = axios.get(endpoint);
+            // need to make this an await in order to get the response before moving on to setting value.
+            const response = await axios.get(endpoint);
 
             // display current temp on page
+            // now we have waited for the promise to finish and can display the information correctly
             this.currentTemp = response.data.main.temp;
+
         },
     },
 };
