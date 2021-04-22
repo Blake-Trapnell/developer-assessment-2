@@ -21,7 +21,7 @@ export default {
         this.getTemp();
     },
     methods: {
-            // define function as async to be able to await later in function.
+        // define function as async to be able to await later in function.
         async getTemp() {
             // set variables (there are no errors in these strings)
             const url = 'http://api.openweathermap.org/data/2.5/weather';
@@ -37,7 +37,6 @@ export default {
             // display current temp on page
             // now we have waited for the promise to finish and can display the information correctly
             this.currentTemp = response.data.main.temp;
-
         },
     },
 };

@@ -69,6 +69,7 @@ export default {
 }
 .chapman-cares--event-photo {
     width: 50%;
+    border-radius: 10px;
     margin-right: 15px;
 }
 @media screen and (max-width: 650px) {
