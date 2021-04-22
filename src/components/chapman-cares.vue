@@ -1,5 +1,15 @@
 <template>
     <div class="chapman-cares">
+        <img
+            :src="require('@/assets/making-strides.jpg')"
+            alt="Making Strides"
+            class="banner-img"
+        />
+        <img
+            :src="require('@/assets/canine-companions.jpg')"
+            alt="Canine Companions"
+            class="banner-img"
+        />
         <HeadingText>Chapman Cares</HeadingText>
 
         <img
