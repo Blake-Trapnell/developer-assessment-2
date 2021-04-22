@@ -1,15 +1,5 @@
 <template>
     <div class="chapman-cares">
-        <img
-            :src="require('@/assets/making-strides.jpg')"
-            alt="Making Strides"
-            class="banner-img"
-        />
-        <img
-            :src="require('@/assets/canine-companions.jpg')"
-            alt="Canine Companions"
-            class="banner-img"
-        />
         <HeadingText>Chapman Cares</HeadingText>
 
         <img
@@ -20,10 +10,13 @@
 
         <div v-for="(event, index) in events" :key="index" class="event">
             <h3 class="event-name">{{ event.name }}</h3>
-            <p class="event-text">{{ event.text }}</p>
-            <img 
-                v-bind:src='event.img'
-            />
+            <section class="chapman-cares--event-description">
+                <img 
+                    class="chapman-cares--event-photo"
+                    v-bind:src='event.img'
+                />
+                <p class="event-text">{{ event.text }}</p>
+            </section>
         </div>
     </div>
 </template>
@@ -66,5 +59,17 @@ export default {
 }
 .event-name {
     margin-bottom: 1rem;
+}
+.event-text {
+text-align: center;
+}
+.chapman-cares--event-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chapman-cares--event-photo {
+    width: 50%;
+    margin-right: 15px;
 }
 </style>
