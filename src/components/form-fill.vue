@@ -38,6 +38,7 @@ export default {
     },
     methods: {
         submitForm() {
+        this.submitted = false
         this.loading = true
         setTimeout(()=> { 
         this.loading = false
