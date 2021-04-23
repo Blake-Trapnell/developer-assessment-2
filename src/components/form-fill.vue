@@ -4,13 +4,13 @@
             <HeadingText>Shift Your Career into Overdrive!</HeadingText>
             <div class="form-fill--careers">
                 <div class="form-fill--career-info">
-                    <h3 class="form-fill--event-text">
+                    <h4 class="form-fill--event-text">
                         We're seeking friendly, happy individuals up for the
                         challenge to change the way people view the automotive
                         industry. If you agree that a customer's time is
                         valuable and positive human interaction is important,
                         then we want to hear from you!
-                    </h3>
+                    </h4>
                     <div
                         v-for="(event, index) in inputs"
                         :key="index"
@@ -21,7 +21,7 @@
                     </div>
                     <button class="form-fill--submit-button" v-on:click="submitForm">I'm Interested</button>
                     <div v-if="loading == true">
-                        <h4>Loading...</h4>
+                        <h3>Loading...</h3>
                     </div>
                     <div v-if="submitted == true">
                         <h4>Submitted!</h4>
@@ -85,13 +85,19 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 350px;
+    color: rgb(92, 92, 92);
 }
 .form-fill--place-holder-text {
     margin: 5px;
+    width: 100%;
+    position: relative;
+    left: 10px;
 }
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     input {
         margin-bottom: 10px;
@@ -107,7 +113,8 @@ export default {
         font-weight: bold;
 }
 .career-photo {
-    width: 50%;
+    max-width: 50%;
+    border-radius:  0 10px 10px 0;
 }
 .banner-img {
     width: 100%;
@@ -118,6 +125,15 @@ export default {
 .event-name {
     margin-bottom: 1rem;
 }
-.event-text {
+@media screen and (max-width: 1000px) {
+    .form-fill--careers {
+    display: flex;
+    flex-direction: column-reverse;
+    }
+    .career-photo {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
 }
 </style>

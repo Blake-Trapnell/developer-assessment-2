@@ -82,5 +82,8 @@ export default {
     .event-text {
         text-align: center;
     }  
+    .event-name {
+        text-align: center;
+    }
 }
 </style>
