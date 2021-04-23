@@ -51,39 +51,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.banner-img {
-    width: 100%;
-}
-.event {
-    margin-top: 2rem;
-}
-.event-name {
-    margin-bottom: 1rem;
-}
-.event-text {
-}
-.chapman-cares--event-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.chapman-cares--event-photo {
-    width: 50%;
-    border-radius: 10px;
-    margin-right: 15px;
-}
-@media screen and (max-width: 650px) {
-    .chapman-cares--event-photo {
-     margin-right: 0px;
-    }
-    .chapman-cares--event-description {
-        flex-direction: column;
-    }
-    .event-text {
-        text-align: center;
-    }  
-    .event-name {
-        text-align: center;
-    }
-}
+@import './chapman-cares.scss';
+
 </style>

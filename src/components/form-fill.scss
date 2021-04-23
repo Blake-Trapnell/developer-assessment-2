@@ -1,0 +1,64 @@
+.form-fill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+.form-fill--careers {
+    display: flex;
+}
+.form-fill--career-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 350px;
+    color: rgb(92, 92, 92);
+}
+.form-fill--place-holder-text {
+    margin: 5px;
+    width: 100%;
+    position: relative;
+    left: 10px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    input {
+        margin-bottom: 10px;
+        width: calc(100% - 20px);
+    }
+}
+.form-fill--submit-button {
+        width: calc(100% - 20px);
+        background-color: rgb(255, 208, 0);
+        border: none;
+        height: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+}
+.career-photo {
+    max-width: 50%;
+    border-radius:  0 10px 10px 0;
+}
+.banner-img {
+    width: 100%;
+}
+.event {
+    margin-top: 2rem;
+}
+.event-name {
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 1000px) {
+    .form-fill--careers {
+    display: flex;
+    flex-direction: column-reverse;
+    }
+    .career-photo {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+}
