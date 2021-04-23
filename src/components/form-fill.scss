@@ -13,6 +13,7 @@
     align-items: center;
     min-height: 350px;
     color: rgb(92, 92, 92);
+    width: 50%;
 }
 .form-fill--place-holder-text {
     margin: 5px;
@@ -31,16 +32,19 @@
     }
 }
 .form-fill--submit-button {
-        width: calc(100% - 20px);
-        background-color: rgb(255, 208, 0);
-        border: none;
-        height: 30px;
-        font-size: 1rem;
-        font-weight: bold;
+    width: calc(100% - 20px);
+    background-color: rgb(255, 208, 0);
+    border: none;
+    height: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.form-fill--image-container {
+    width: 50%;
 }
 .career-photo {
-    max-width: 50%;
-    border-radius:  0 10px 10px 0;
+    max-width: 100%;
+    border-radius: 0 10px 10px 0;
 }
 .banner-img {
     width: 100%;
@@ -52,13 +56,42 @@
     margin-bottom: 1rem;
 }
 @media screen and (max-width: 1000px) {
+    .form-fill--career-info {
+        width: 100%;
+    }
+    .form-fill--image-container {
+        width: 100%;
+    }
     .form-fill--careers {
-    display: flex;
-    flex-direction: column-reverse;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .career-photo {
         max-width: 100%;
         border-radius: 10px;
     }
-
+    .form-fill--submit-button{
+        width: 50%;
+    }
+    .form-fill--place-holder-text {
+        width: 50%;
+    }
+    .form {
+        input {
+            width: 50%;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .form-fill--submit-button{
+        width: 80%;
+    }
+    .form-fill--place-holder-text {
+        width: 80%;
+    }
+    .form {
+        input {
+            width: 80%;
+        }
+    }
 }

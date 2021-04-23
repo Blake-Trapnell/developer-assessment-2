@@ -16,10 +16,17 @@
                         :key="index"
                         class="form"
                     >
-                        <h3 class="form-fill--place-holder-text">{{event.placeHolder}}</h3>
+                        <h3 class="form-fill--place-holder-text">
+                            {{ event.placeHolder }}
+                        </h3>
                         <input />
                     </div>
-                    <button class="form-fill--submit-button" v-on:click="submitForm">I'm Interested</button>
+                    <button
+                        class="form-fill--submit-button"
+                        v-on:click="submitForm"
+                    >
+                        I'm Interested
+                    </button>
                     <div v-if="loading == true">
                         <h3>Loading...</h3>
                     </div>
@@ -27,11 +34,13 @@
                         <h4>Submitted!</h4>
                     </div>
                 </div>
-                <img
-                    :src="require('@/assets/careers.jpg')"
-                    alt="Chapman Careers"
-                    class="career-photo"
-                />
+                <div class="form-fill--image-container">
+                    <img
+                        :src="require('@/assets/careers.jpg')"
+                        alt="Chapman Careers"
+                        class="career-photo"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -67,13 +76,13 @@ export default {
                 this.loading = false;
                 this.submitted = true;
             }, 1500);
-            setTimeout(()=> {
+            setTimeout(() => {
                 this.submitted = false;
-            },2500)
+            }, 2500);
         },
     },
 };
 </script>
 <style lang="scss" scoped>
-@import "./form-fill.scss";
+@import './form-fill.scss';
 </style>
