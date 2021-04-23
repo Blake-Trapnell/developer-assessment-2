@@ -67,6 +67,9 @@ export default {
                 this.loading = false;
                 this.submitted = true;
             }, 1500);
+            setTimeout(()=> {
+                this.submitted = false;
+            },2500)
         },
     },
 };
